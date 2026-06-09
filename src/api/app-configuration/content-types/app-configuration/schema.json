@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_configurations",
+  "info": {
+    "singularName": "app-configuration",
+    "pluralName": "app-configurations",
+    "displayName": "app configuration"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "couleur_principale": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "couleur_secondaire": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "required": true
+    }
+  }
+}

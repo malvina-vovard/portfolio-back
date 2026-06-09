@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.47.1",
+    "@strapi/plugin-color-picker": "^5.47.1",
     "@strapi/plugin-users-permissions": "5.47.1",
     "@strapi/strapi": "5.47.1",
     "better-sqlite3": "12.8.0",
@@ -37,5 +38,8 @@
   "strapi": {
     "uuid": "6507dc79-f41a-4458-9783-fb38349febf2",
     "installId": "20b7f4c829508678d6a6422ba8e5d845c6c64fb35ddfd3246422b2a2ddc46792"
+  },
+  "volta": {
+    "node": "24.16.0"
   }
 }
