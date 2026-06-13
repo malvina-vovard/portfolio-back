@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ligne_medias",
+  "info": {
+    "singularName": "ligne-media",
+    "pluralName": "ligne-medias",
+    "displayName": "ligne media"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "medias": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "projet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::projet.projet",
+      "inversedBy": "ligne_medias"
+    },
+    "identifiant": {
+      "type": "string",
+      "private": true,
+      "required": true,
+      "unique": true
+    }
+  }
+}

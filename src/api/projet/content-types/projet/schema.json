@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projets",
+  "info": {
+    "singularName": "projet",
+    "pluralName": "projets",
+    "displayName": "projet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "sous_titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "mini_description": {
+      "type": "text",
+      "required": true
+    },
+    "outils": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date",
+      "required": false
+    },
+    "ligne_medias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ligne-media.ligne-media",
+      "mappedBy": "projet"
+    },
+    "categorie": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "marketing_digital",
+        "design",
+        "website"
+      ]
+    },
+    "couverture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "favoris": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  }
+}
